@@ -14,11 +14,14 @@ nav .left {
     padding-left: 90px;
     display: flex;
     align-items: center;
-
 }
 
 nav .left li {
     display: inline;
+}
+
+nav .left a{
+    text-decoration: none;
 }
 
 

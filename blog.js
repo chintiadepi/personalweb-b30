@@ -1,9 +1,9 @@
 
-let blogs = []
+let blogs = []  // untuk menampung data blog yang dipost.
 
 
 function addBlog(event) {
-    event.preventDefault()
+    event.preventDefault() // untuk broowser tidak merefresh.
 
 
     let title = document.getElementById('input-blog-title').value
@@ -11,25 +11,25 @@ function addBlog(event) {
 
     let image = document.getElementById('input-blog-image').files
     
-    image = URL.createObjectURL(image[0])
+    image = URL.createObjectURL(image[0]) //untuk membuat url gambar agar bisa terbaca di browser.
     
-    let blog = {
+    let blog = {  
         
         title: title,
         content: content,
         image:image,
         author:'eva',
-        postAt:new Date()
+        postAt:new Date()  // waktu ketika post blog.
     }
 
-    blogs.push(blog)
+    blogs.push(blog) // untuk mengirimkan data blog yang dipost kedalama variabel blogs.
 
     console.log(blogs);
 
     // for (let i = 0; i < blogs.length; i++){
     //     console.log(blogs[i]);
     // } 
-    renderBlog()
+    renderBlog() // menampilkan data yang kita post.
 
 }
 
@@ -92,7 +92,6 @@ function getFullTime(time) {
   
   return `${date} ${month[monthIndex]} ${year} ${hours}:${minutes}WIB`
 
-  return FullTime
 }
 
 function getDistanceTime(time) {
